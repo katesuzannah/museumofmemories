@@ -29,8 +29,8 @@ public class playerMovement : MonoBehaviour {
 		if (!frozen) {
 			float frontBack = Input.GetAxis("Vertical") * moveSpeed;
 			float leftRight = Input.GetAxis("Horizontal") * moveSpeed;
-			playerCharCon.Move(transform.forward * frontBack * Time.deltaTime);
-			playerCharCon.Move(transform.right * leftRight * Time.deltaTime);
+			playerCharCon.Move(transform.right * frontBack * Time.deltaTime);
+			playerCharCon.Move(transform.forward * -leftRight * Time.deltaTime);
 		}
 		// Add gravity
 		playerCharCon.Move(Physics.gravity * .008f); //move the controller down

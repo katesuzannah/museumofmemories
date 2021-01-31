@@ -48,12 +48,12 @@ public class rotateObject : MonoBehaviour {
 //		reticle = GameObject.FindGameObjectWithTag ("Reticle");
 		startPos = transform.localPosition;
 		transform.localPosition = centerPos;
-		mouseLook.rotatingObject = true;
+		//mouseLook.rotatingObject = true;
 	}
 	public void Exit () {
 		//centerPos = new Vector3 (0f, 0f, localZ);
 //		reticle = GameObject.FindGameObjectWithTag ("Reticle");
 		//transform.localPosition = startPos;
-		mouseLook.rotatingObject = false;
+		//mouseLook.rotatingObject = false;
 	}
 }
