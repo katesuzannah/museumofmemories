@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class holdSwitch : MonoBehaviour {
 
@@ -17,6 +18,7 @@ public class holdSwitch : MonoBehaviour {
 	public GameObject reticle;
 	playerMovement player;
 	Transform startTransform;
+	public fadeIn fade;
 
 	void Start () {
 		thisSource = GetComponent<AudioSource> ();
@@ -51,6 +53,11 @@ public class holdSwitch : MonoBehaviour {
 					else {
 						memoryAudio = null;
                     }
+				}
+				else if (rayHit.collider.tag == "Door") {
+					//Fade out and go to end screen
+					fade.Fade(1);
+					SceneManager.LoadScene(2);
 				}
 			}
 		}
